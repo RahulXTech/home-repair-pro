@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c ' *)",
+      "Bash(python *)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --app --no-src-dir --yes --eslint)",
+      "Read(//c/Users/jhapa/Downloads/**)",
+      "Bash(npx create-next-app@latest homerepairpro-web --typescript --tailwind --app --no-src-dir --yes --eslint)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(measure-object)",
+      "Bash(select-object Count)",
+      "Skill(run)",
+      "Bash(Start-Sleep -Seconds 5)",
+      "Bash(Get-Content \"C:\\\\Users\\\\jhapa\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-jhapa-Downloads-homerepairpro\\\\93052b60-c17e-4332-9f11-3b2c8066a93f\\\\tasks\\\\bt4c853v6.output\" -Tail 20)",
+      "WebFetch(domain:localhost)",
+      "Bash(curl -s \"http://127.0.0.1:3001/landing/ac-repair-indore\")"
+    ]
+  }
+}

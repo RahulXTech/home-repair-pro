@@ -1,0 +1,843 @@
+=== ROADMAP ===
+HOME APPLIANCE REPAIR
+Business Growth Master Roadmap
+Account: bALRAM NEERAJ JHAPATE  |  Prepared: June 2026
+📌  Yeh document tera complete business playbook hai — Google Ads se lekar website architecture, SEO, tracking, aur government contract positioning tak sab kuch ek jagah.
+1. Google Ads Performance Intelligence
+Last 6 months ka data Windsor.ai se pull karke analyze kiya gaya. Neeche complete breakdown hai.
+1.1 Campaign Performance Summary
+Campaign
+Spend (₹)
+Clicks
+Conversions
+CPC (₹)
+Conv Rate
+HVAC Repair
+16,091
+761
+101
+21.14
+13.3%
+AC Repair | Bhopal | Search
+1,786
+79
+31
+22.60
+39.2% ⭐
+Kolar / Arerra Colony
+74
+4
+1
+18.43
+25%
+Conversion HVAC (paused)
+0
+0
+0
+—
+—
+⭐ KEY INSIGHT: 'AC Repair | Bhopal | Search' campaign ka conversion rate 39% hai — yeh industry average se 3x zyada hai. Naye account mein yeh structure copy karna hai.
+1.2 Top Performing Keywords (Spend sorted)
+Keyword
+Spend (₹)
+Clicks
+Conv.
+CPC (₹)
+Status
+ac service bhopal
+4,326
+213
+33.0
+20.31
+🏆 Best
+ac service near me
+2,675
+129
+20.0
+20.73
+🏆 Best
+ac servicing bhopal
+1,911
+89
+2.5
+21.47
+⚠️ High spend, low conv
+ac repair bhopal
+1,710
+81
+6.0
+21.11
+✅ Good
+ac repair service in bhopal
+1,576
+71
+6.0
+22.19
+✅ Good
+ac service and repair near me
+1,178
+56
+11.6
+21.04
+✅ Good
+ac repair near me
+1,069
+50
+9.5
+21.38
+✅ Good
+air conditioner repair near me
+922
+40
+6.4
+23.05
+✅ Good
+ac mechanic near me
+751
+33
+17.0
+22.77
+🏆 Hidden Gem
+ac installation and service near me
+556
+24
+6.0
+23.18
+✅ Good
+split ac repair bhopal
+177
+8
+4.0
+22.07
+🏆 32% CTR!
+⚠️  WASTE ALERT: 'ac servicing bhopal' pe ₹1,911 spend hua sirf 2.5 conversions pe — 89 clicks mein se sirf 2.8% convert hui. Naye account mein is keyword pe budget reduce karo ya negative keyword daalo.
+1.3 Recommended Keywords — New Appliances (Washing Machine, Fridge, etc.)
+Yeh keywords proven AC data se derive karke banaye gaye hain. Exact match use karo shuru mein.
+Service
+City-specific Keyword
+Near Me Keyword
+Mechanic Keyword
+Washing Machine
+washing machine repair indore
+washing machine repair near me
+washing machine mechanic near me
+Washing Machine
+washing machine service bhopal
+washing machine service near me
+—
+Refrigerator
+fridge repair indore
+refrigerator repair near me
+fridge mechanic near me
+Refrigerator
+refrigerator service bhopal
+fridge not cooling repair
+—
+Chimney
+chimney cleaning indore
+chimney service near me
+kitchen chimney repair near me
+Geyser
+geyser repair indore
+water heater repair near me
+geyser not working repair
+Microwave
+microwave repair indore
+microwave oven repair near me
+—
+AC (New cities)
+ac repair indore
+ac service near me
+ac mechanic near me
+AC (New cities)
+ac service ujjain
+—
+—
+AC (New cities)
+ac repair jabalpur
+—
+—
+2. Website Architecture — Complete Blueprint
+2.1 Domain & Hosting Strategy
+• Recommended Domain: repairwale.in  OR  fixkaroo.in  OR  homefixnow.in
+• Avoid: City-specific domains — expand nahi hote
+• Hosting: Cloudflare Pages (free) + Vercel ya Hostinger (₹2,000/yr)
+• Tech Stack: Next.js (recommended) — fast, SEO-friendly, Claude Code se bana sakte ho
+• Database: Supabase (FREE tier — PostgreSQL, auth, storage sab included)
+• CMS (Blogs): Sanity.io ya Contentful free tier — blog management easy
+2.2 Website Page Structure
+Page Type
+URL Pattern
+Count
+Priority
+Homepage
+/
+1
+P0 — Launch karo
+Service + City
+/ac-repair-indore/
+~80 pages
+P0 — SEO goldmine
+Landing Pages (Ads)
+/landing/ac-repair-indore/
+~30 pages
+P0 — Ads ke liye
+Blog Articles
+/blog/[slug]/
+500+ target
+P1 — Month 2 se
+About Us + GST
+/about/
+1
+P0 — Trust ke liye
+Contact / Book
+/contact/
+1
+P0
+Government Work
+/government-contracts/
+1
+P1 — Contracts ke liye
+MSME/Certification
+/certifications/
+1
+P1
+2.3 Trust Signals — GST, MSME, Government Work
+Bhai, yeh section teri biggest USP hai. Large contracts aur B2B clients ke liye yeh sab mandatory hai.
+• GST Number: Website footer + About page pe dalno. 'GST Registered Business' badge lagao
+• MSME Certificate: Udyam Registration portal se download karo (free). Scan karke website pe daalo
+• Government Work: Dedicated page banao — project name, department, scope of work (photos agar ho)
+• Insurance: 'Insured Technicians' mention karo — B2B clients ke liye important
+• Service Agreement: Download karne ka option do — corporate clients maangte hain
+• PAN Number: Invoicing page pe mention karo
+💡 GMB (Google My Business) Profile: Har service category add karo — AC Repair, Washing Machine Repair, etc. Har service ke liye alag posts daalo weekly. Photos of actual work upload karo. Reviews encourage karo — 50+ reviews = GMB top rank guaranteed lagbhag.
+3. Conversion Tracking — Complete Setup
+3.1 The Problem (Your Current Setup)
+❌  Current issues: Fake clicks aa rahi hain, GCLID save nahi ho raha, calls track nahi ho rahi, leads count nahi ho raha — isliye Google ko signal nahi mil raha ki konsa keyword actually kaam kar raha hai.
+3.2 Tracking Stack — Tools to Use
+Tool
+Purpose
+Cost
+Priority
+Google Tag Manager (GTM)
+Sab tracking ka master controller
+FREE
+Install Day 1
+Google Analytics 4 (GA4)
+Website traffic + user behavior
+FREE
+Install Day 1
+Microsoft Clarity
+Heatmaps + session recordings
+FREE
+Install Day 1
+Google Ads Conversion Tracking
+Calls + form submits count karo
+FREE
+Install Day 1
+MyOperator / Knowlarity
+Call tracking — kis ad se call aayi
+₹999/mo
+Week 2
+Supabase DB
+GCLID + lead data save karo
+FREE
+Week 1
+3.3 What Data to Capture
+• GCLID: Google Click ID — kis specific ad/keyword se customer aaya
+• UTM Parameters: utm_source, utm_medium, utm_campaign, utm_keyword
+• Device Type: Mobile vs desktop — appliance repair mostly mobile se aata hai
+• Call Time: Kis time pe call aayi — ad schedule optimize karne ke liye
+• City: User ka city — city-wise performance track karo
+• Service Type: Konsa service page dekha — AC vs washing machine vs fridge
+• Lead Status: Call received → Technician assigned → Job done → Payment
+3.4 Fake Click Protection
+• Search Only: Display Network band karo — fake clicks Display se aate hain
+• IP Exclusions: Ek hi IP se baar baar click aaye toh Google Ads mein block karo
+• Click Fraud Tools: ClickCease (₹2,500/mo) ya TrafficGuard — consider karo agar budget big ho
+• Honeypot Fields: Landing page mein hidden form field — bots fill karte hain, real users nahi
+• Conversion Lag: Call conversion 30 minute se zyada ka — bots usually short session karte hain
+4. Google Ads — New Account Structure
+4.1 Why New Account
+• Old account: No conversion history, quality score kharab, fake click pattern
+• New account: Fresh start, proper conversion tracking se day 1, Google trust builds faster
+• Important: Old account band mat karo abhi — data reference ke liye rakho
+4.2 Campaign Architecture
+Phase
+Campaigns
+Budget/mo
+Timeline
+Phase 1 (Month 1)
+AC Repair — Indore, AC Repair — Bhopal
+₹12,000
+Launch immediately
+Phase 1 (Month 1)
+Washing Machine — Indore, WM — Bhopal
+₹6,000
+Launch immediately
+Phase 2 (Month 2)
+Fridge Repair — Indore+Bhopal, Chimney, Geyser
+₹8,000
+After data from P1
+Phase 3 (Month 3)
+Ujjain, Jabalpur, Jaipur campaigns
+₹10,000+
+After P2 validation
+Scale (Month 4+)
+Mumbai + more cities
+₹30,000+
+Scale winners only
+4.3 Non-Negotiable Settings
+• Network: Search ONLY — Display aur Search Partners band
+• Location targeting: 'People IN or regularly IN' — NOT 'interested in'
+• Bid strategy: Manual CPC first 2 weeks → then Target CPA
+• Ad schedule: 6 AM – 10 PM only (appliance emergencies peak hours)
+• Device: All devices, mobile bid adjustment +20%
+• Negative keywords: -free -diy -youtube -job -career -new buy -price list -manual
+5. SEO & Blog Strategy — Organic Traffic Machine
+5.1 The Goal
+Target: 500+ blog posts in 12 months = 1,000+ organic calls/month without paying for ads. Ek baar rank kar gaya toh ad budget kam karna hoga.
+5.2 Blog Content Formula
+Blog Type
+Example Title
+Monthly Volume (est.)
+Conversion Potential
+Problem-based
+AC cooling nahi kar raha — 5 reasons + fix
+500-2000/mo
+HIGH
+City-specific service
+AC repair service in Indore — cost & contact
+200-800/mo
+VERY HIGH
+Brand-specific
+LG split AC error code E4 kya hai
+100-500/mo
+MEDIUM
+Comparison
+AC service vs AMC contract — kya lena chahiye
+200-600/mo
+HIGH
+How-to
+Washing machine drain nahi ho rahi — ghar pe fix
+500-2000/mo
+LOW-MEDIUM
+Cost guide
+AC gas refill cost Indore 2025
+300-1000/mo
+HIGH
+Seasonal
+AC summer service kab karwayein — checklist
+1000+/mo
+HIGH
+5.3 City x Service Matrix (Priority pages)
+Har city ke liye har service ka alag page banao. Yeh 80+ pages website ka SEO foundation hai.
+Indore
+Bhopal
+Ujjain
+Jabalpur
+Jaipur
+AC Repair
+P0
+P0
+P1
+P1
+P1
+Washing Machine
+P0
+P0
+P1
+P2
+P1
+Refrigerator
+P0
+P0
+P1
+P2
+P1
+Chimney
+P1
+P1
+P2
+P2
+P2
+Geyser
+P1
+P1
+P2
+P2
+P2
+6. Execution Timeline
+Week
+Tasks
+Owner
+Status
+Week 1
+Domain buy karo + hosting setup + Supabase DB create
+You
+TODO
+Week 1
+Next.js project scaffold (Claude Code se)
+Claude Code
+TODO
+Week 1
+GTM + GA4 + Clarity install karo
+You + Claude
+TODO
+Week 1
+Homepage + 5 service pages live karo
+Claude Code
+TODO
+Week 2
+Landing pages for ads (10 pages)
+Claude Code
+TODO
+Week 2
+New Google Ads account + Indore/Bhopal AC campaigns
+You
+TODO
+Week 2
+GCLID tracking code implement karo
+Claude Code
+TODO
+Week 2
+Call tracking number setup (MyOperator)
+You
+TODO
+Week 3
+Washing machine + fridge campaigns launch
+You
+TODO
+Week 3
+30 blog posts publish karo
+Claude (content)
+TODO
+Week 4
+GMB profile update + all services add
+You
+TODO
+Week 4
+GST/MSME/Government page live
+Claude Code
+TODO
+Month 2
+50 more blog posts, 5 new cities
+Both
+TODO
+Month 3
+Analytics review + scale winners
+Both
+TODO
+7. Budget Allocation
+Category
+Cost/Month
+Notes
+Google Ads — Indore AC + WM
+₹10,000
+Primary market
+Google Ads — Bhopal AC + WM
+₹8,000
+Proven market
+Google Ads — Other cities
+₹7,000
+Ujjain, Jabalpur, Jaipur test
+Google Ads — Scale cities
+₹5,000
+Mumbai small test
+Hosting (Vercel/Hostinger)
+₹200
+Annual ₹2,400
+Call Tracking (MyOperator)
+₹999
+Virtual numbers
+Domain
+₹100
+Annual ₹1,200
+Total
+~₹31,300/mo
+Within ₹30K+ budget
+— END OF DOCUMENT 1: MASTER ROADMAP —
+Next: Document 2 = Technical Implementation Guide
+
+=== TECHNICAL GUIDE ===
+TECHNICAL IMPLEMENTATION GUIDE
+Website + Ads + Tracking — Step by Step
+Build with Claude Code  |  June 2026
+📋  Yeh document Document 1 (Roadmap) ka implementation part hai. Har kaam ka exact step, code snippet, aur checklist hai. Claude Code se sab kuch banana hai.
+Module 1: Tech Stack & Project Setup
+1.1 Free Tools — Zero Monthly Cost
+Tool
+Use Case
+Free Tier
+Link
+Next.js 14
+Website framework
+Unlimited
+nextjs.org
+Vercel
+Hosting + deploy
+Free (Hobby)
+vercel.com
+Supabase
+Database + Auth + Storage
+500MB free
+supabase.com
+Cloudflare
+DNS + CDN + security
+Free forever
+cloudflare.com
+Google Tag Manager
+All tracking management
+Free
+tagmanager.google.com
+Google Analytics 4
+Traffic analytics
+Free
+analytics.google.com
+Microsoft Clarity
+Heatmaps + recordings
+Free forever
+clarity.microsoft.com
+Sanity.io
+Blog CMS
+Free (3 users)
+sanity.io
+Resend
+Email notifications (leads)
+3000 emails/mo free
+resend.com
+1.2 Claude Code Setup
+Claude Code ek command-line tool hai jo code likhta hai directly. Terminal mein install karo aur 'claude' command se baat karo.
+Claude Code ko ye batao:
+• 'Build a Next.js 14 appliance repair website with Tailwind CSS'
+• 'Add Supabase for lead capture and GCLID tracking'
+• 'Create service pages for each city and appliance type'
+• 'Add Google Tag Manager and GA4 integration'
+1.3 Project Structure
+repairwale/
+├── app/
+│   ├── page.tsx                    (Homepage)
+│   ├── about/page.tsx              (GST + MSME + Company info)
+│   ├── contact/page.tsx            (Contact + booking form)
+│   ├── government-contracts/       (Govt work showcase)
+│   ├── certifications/             (GST, MSME, insurance)
+│   ├── landing/[city]/[service]/   (Ad landing pages)
+│   ├── [service]-[city]/           (SEO pages)
+│   └── blog/[slug]/                (Blog articles)
+├── components/
+│   ├── CallButton.tsx              (Phone + WhatsApp CTA)
+│   ├── LeadForm.tsx                (GCLID tracking form)
+│   ├── TrustBadges.tsx             (GST, MSME badges)
+│   └── CityServiceCard.tsx
+├── lib/
+│   ├── supabase.ts                 (DB connection)
+│   ├── tracking.ts                 (GCLID capture logic)
+│   └── gtm.ts                     (GTM events)
+└── public/
+    ├── gst-certificate.pdf
+    ├── msme-certificate.pdf
+    └── logos/
+Module 2: Supabase Database — Lead Tracking
+2.1 Tables to Create (Supabase SQL Editor mein run karo)
+-- Table 1: Leads
+CREATE TABLE leads (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  name TEXT,
+  phone TEXT NOT NULL,
+  city TEXT,
+  service TEXT,
+  gclid TEXT,          -- Google Click ID
+  utm_source TEXT,
+  utm_campaign TEXT,
+  utm_keyword TEXT,
+  device TEXT,
+  landing_page TEXT,
+  status TEXT DEFAULT 'new',  -- new/assigned/done/paid
+  technician_name TEXT,
+  amount DECIMAL,
+  notes TEXT
+);
+-- Table 2: Calls log
+CREATE TABLE calls (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  phone_from TEXT,
+  duration_seconds INT,
+  gclid TEXT,
+  city TEXT,
+  service TEXT,
+  campaign TEXT,
+  keyword TEXT,
+  converted BOOLEAN DEFAULT FALSE
+);
+2.2 GCLID Capture Code (landing page mein daalo)
+// lib/tracking.ts
+export function captureGCLID() {
+  const params = new URLSearchParams(window.location.search);
+  const gclid = params.get('gclid');
+  if (gclid) {
+    localStorage.setItem('gclid', gclid);
+    localStorage.setItem('gclid_time', new Date().toISOString());
+    localStorage.setItem('utm_source', params.get('utm_source') || '');
+    localStorage.setItem('utm_campaign', params.get('utm_campaign') || '');
+    localStorage.setItem('utm_keyword', params.get('utm_keyword') || '');
+    localStorage.setItem('landing_page', window.location.pathname);
+  }
+}
+
+export function getStoredTracking() {
+  return {
+    gclid: localStorage.getItem('gclid'),
+    utm_source: localStorage.getItem('utm_source'),
+    utm_campaign: localStorage.getItem('utm_campaign'),
+    utm_keyword: localStorage.getItem('utm_keyword'),
+    landing_page: localStorage.getItem('landing_page'),
+  };
+}
+2.3 Lead Form with Tracking
+// components/LeadForm.tsx
+import { captureGCLID, getStoredTracking } from '@/lib/tracking';
+import { supabase } from '@/lib/supabase';
+
+export default function LeadForm({ city, service }) {
+  useEffect(() => { captureGCLID(); }, []);
+
+  const handleSubmit = async (e) => {
+    const tracking = getStoredTracking();
+    await supabase.from('leads').insert({
+      name: e.target.name.value,
+      phone: e.target.phone.value,
+      city: city,
+      service: service,
+      device: /Mobile/.test(navigator.userAgent) ? 'mobile' : 'desktop',
+      ...tracking
+    });
+    // Also fire Google Ads conversion
+    window.gtag('event', 'conversion', {
+      send_to: 'AW-XXXXXXXXX/YYYYYY',
+      value: 1.0
+    });
+  };
+}
+Module 3: Landing Pages — Ads ke liye
+3.1 Landing Page Requirements
+⚠️  Landing page aur main website alag hote hain. Ads ka traffic sirf landing page pe jaana chahiye — wahan se conversion hogi. Main website SEO ke liye hai.
+Element
+Requirement
+Why
+Phone number
+Above the fold, click-to-call
+60%+ conversions phone pe hoti hain
+Headline
+City + Service in H1 (e.g., 'AC Repair in Indore')
+Quality score improve karta hai
+Response time
+'30 min mein technician' type promise
+Urgency creates conversion
+Trust badges
+GST, MSME, 'Verified' icons
+Fear of fraud door karta hai
+Reviews
+3-5 Google reviews embed karo
+Social proof
+Price mention
+'Starting ₹299' type — do not hide
+Serious leads filter hoti hain
+Form
+Name + Phone only (simple = more fills)
+Friction kam = more leads
+Load time
+< 2 seconds — test on Lighthouse
+Google penalizes slow pages
+3.2 URL Structure for Landing Pages
+• AC Repair Indore ads: /landing/ac-repair-indore/
+• Washing Machine Indore ads: /landing/washing-machine-repair-indore/
+• AC Repair Bhopal ads: /landing/ac-repair-bhopal/
+• Fridge Repair Indore ads: /landing/refrigerator-repair-indore/
+Pattern: /landing/[service]-[city]/ — har campaign ke liye alag landing page. Google Ads mein final URL yahi dena.
+Module 4: GTM + GA4 + Google Ads Tracking
+4.1 GTM Setup Checklist
+☐ GTM account create karo — tagmanager.google.com
+☐ Container create karo — Web type
+☐ GTM code website ke <head> mein daalo (Next.js mein layout.tsx mein)
+☐ GA4 tag GTM se add karo (Measurement ID: G-XXXXXXXXXX)
+☐ Google Ads Conversion Linker tag add karo
+☐ Microsoft Clarity tag add karo
+4.2 Conversion Actions to Create in Google Ads
+Conversion Name
+Type
+Count as
+Value
+Phone call from ad
+Phone call
+Every call > 30 sec
+₹200 (estimated)
+Phone click from website
+Website event
+Button click
+₹200
+Form submit
+Website event
+Form submission
+₹200
+WhatsApp click
+Website event
+Button click
+₹150
+4.3 Google Ads — Auto-tagging MUST be ON
+⚠️  Google Ads account mein Settings > Account Settings > Auto-tagging = ON karo. Iske bina GCLID nahi aayega URL mein aur tracking fail hogi.
+4.4 Microsoft Clarity — Kya milega
+• Session recordings — dekho user ne kya kiya landing page pe
+• Heatmaps — kahan click kiya, kahan scroll ruka
+• Rage clicks — frustration points identify karo
+• Dead clicks — buttons jo kaam nahi kar rahe
+Clarity data se landing page optimize karo — conversion rate 2x ho sakta hai.
+Module 5: GST, MSME, Government Contracts Page
+5.1 About Us Page — Must Include
+☐ Company full name aur registered address
+☐ GST Registration Number (visible, not hidden)
+☐ GST certificate image/PDF download link
+☐ MSME/Udyam Registration Number
+☐ MSME certificate download link
+☐ Year of establishment
+☐ Total repairs done (e.g., '5,000+ appliances repaired')
+☐ Team size / Number of technicians
+☐ Service areas map
+5.2 Government Contracts Page
+💼  Yeh page large corporate aur government clients ke liye hai. Ek baar bana lo toh tenders mein reference de sakte ho.
+☐ List of past government/institutional work
+☐ Types of contracts accepted (AMC, one-time, bulk)
+☐ Purchase order / work order examples (blurred agar sensitive)
+☐ Contact person for B2B inquiry
+☐ Download: Service Rate Card PDF
+☐ Download: Company Profile PDF
+5.3 Footer — Har Page Pe
+Footer mein hona chahiye:
+✓ GST No: XX-XXXXXXX-XXXXXXX
+✓ MSME Registered | Udyam No: UDYAM-MP-XXXXX
+✓ 'Verified Service Provider'
+✓ Links: Privacy Policy | Terms | Refund Policy
+✓ Address
+✓ Phone + WhatsApp
+Module 6: Blog Setup — SEO Traffic Engine
+6.1 Blog URL Structure
+• Pattern: /blog/[slug]/
+• Example 1: /blog/ac-service-indore-cost-2025/
+• Example 2: /blog/washing-machine-not-spinning-fix/
+• Example 3: /blog/refrigerator-not-cooling-reasons/
+6.2 Blog Post Template (Every post mein yeh hona chahiye)
+Section
+Content
+SEO Purpose
+Title (H1)
+Keyword + city + year
+Primary keyword target
+Meta description
+150 chars — problem + solution + city + CTA
+Click-through rate
+Intro (150 words)
+Problem describe karo
+Engagement
+Main content (800-1200 words)
+Step-by-step solution
+Rank longer
+FAQ section
+5-7 related questions
+Featured snippets
+CTA box
+'Call us in [City]: XXXXXXXXXX'
+Lead generation
+Schema markup
+FAQPage + LocalBusiness
+Rich results
+Internal links
+2-3 links to service pages
+SEO link flow
+6.3 First 50 Blog Topics to Create
+These are high-priority, high-search topics. Use Claude to write all of these.
+• AC cooling nahi kar raha — Indore/Bhopal/Ujjain (3 articles)
+• AC service cost 2025 — har city ke liye (10 articles)
+• Washing machine error codes — Samsung/LG/Whirlpool/Bosch (4 articles)
+• Fridge compressor repair cost — city wise (5 articles)
+• AC gas refill cost — city wise (5 articles)
+• Split AC vs window AC — which to repair (1 article)
+• AC AMC contract worth hai ya nahi (1 article)
+• Chimney cleaning — ghar pe kaise karein vs professional (1 article)
+• Geyser not heating — 5 reasons (1 article)
+• Top AC brands India — repair cost comparison (1 article)
+• Inverter AC vs non-inverter — which better (1 article)
+• AC installation charges Indore/Bhopal (2 articles)
+Module 7: Google My Business (GMB) Optimization
+7.1 GMB Profile Checklist
+☐ Business name exact karo — 'Repair Wale' ya jo bhi brand name
+☐ Primary category: 'Appliance Repair Service'
+☐ Additional categories: AC Repair, Washing Machine Repair, Refrigerator Repair
+☐ Phone number: same as website pe hai
+☐ Website URL add karo
+☐ Service area: Indore, Bhopal, Ujjain etc. add karo
+☐ Services section: har service alag alag add karo with price range
+☐ Business hours: 6 AM — 10 PM daily
+☐ Photos: minimum 20 photos — actual repair work, team, tools
+☐ Posts: weekly ek post daalo (offer/tip/service)
+7.2 Reviews Strategy
+50+ genuine reviews = GMB top 3 position almost guaranteed for local searches. Har satisfied customer se review maango.
+• WhatsApp pe review link bhejo immediately after job done
+• Script: 'Bhai, ek chhota kaam hai — yahan 5 star review de do: [link]'
+• QR code banao review link ka — visiting card pe print karo
+• Never fake reviews — Google ban kar deta hai
+7.3 GMB Posts Schedule
+Day
+Post Type
+Example Content
+Monday
+Service highlight
+AC service ₹499 mein — Indore mein same day
+Wednesday
+Tip/Advice
+Summers mein AC filter clean karo — cooling better hogi
+Friday
+Offer
+Weekend offer: Washing machine service ₹50 off
+Sunday
+Before/After
+Customer ki AC thik ki — 2 hours mein cooling shuru
+Module 8: Master TODO List — Claude Code ke liye
+Phase 1: Foundation (Week 1-2)
+Yeh sab Claude Code ko bolo — ek ek task. 'Claude, create a Next.js landing page for AC repair in Indore with call tracking' jaisa prompt do.
+Website Setup
+☐ Next.js 14 project scaffold with Tailwind CSS
+☐ Supabase project create karo + tables banao (leads + calls)
+☐ Homepage — hero section, services grid, cities, trust badges
+☐ Header + Footer component (GST number, phone, WhatsApp)
+☐ GCLID tracking code implement karo
+☐ GTM + GA4 integration
+☐ Microsoft Clarity script add
+Service + Landing Pages
+☐ Template component: ServiceCityPage (reusable)
+☐ Generate 10 service+city SEO pages (AC Repair — Indore, Bhopal, etc.)
+☐ Template component: LandingPage (ads ke liye)
+☐ Generate 10 landing pages for initial campaigns
+☐ Call tracking button — click event fires GTM
+☐ Lead form — name + phone + hidden GCLID field
+Trust Pages
+☐ About Us page — GST, MSME, company info
+☐ Certifications page — certificate images display
+☐ Government Contracts page — past work showcase
+☐ Privacy Policy + Terms of Service pages
+Phase 2: Content & Blog (Week 3-4)
+☐ Blog system setup (Sanity.io CMS integration)
+☐ Blog index page (/blog/)
+☐ Blog post template with SEO meta tags + schema
+☐ Write + publish 30 blog posts
+☐ Sitemap.xml auto-generate
+☐ Robots.txt configure
+Phase 3: Optimization (Month 2)
+☐ Page speed optimization — Lighthouse score > 90
+☐ Schema markup — LocalBusiness + FAQPage on all pages
+☐ Internal linking structure — blog to service pages
+☐ Image optimization — WebP format, lazy loading
+☐ Mobile optimization — all pages test karo
+☐ A/B test landing pages — 2 versions per city
+— END OF DOCUMENT 2: TECHNICAL IMPLEMENTATION GUIDE —
+Build with Claude Code. One task at a time. Ek ek step complete karo.
