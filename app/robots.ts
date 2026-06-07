@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/landing/'],
+        disallow: ['/landing/', '/admin/'],
       },
     ],
     sitemap: 'https://homerepairpro.in/sitemap.xml',
