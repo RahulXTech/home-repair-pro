@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     url: 'https://homerepairpro.in',
     siteName: 'HomeRepairPro',
     type: 'website',
+    images: [{ url: 'https://www.homerepairpro.in/logo.png', width: 400, height: 120 }],
   },
   alternates: {
     canonical: 'https://homerepairpro.in',
@@ -73,7 +74,7 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         </noscript>
         <GCLIDCapture />
         <Header />
-        <main>{children}</main>
+        <main className="pt-16">{children}</main>
         <Footer />
         <WhatsAppFloat />
         <StickyBottomCTA />

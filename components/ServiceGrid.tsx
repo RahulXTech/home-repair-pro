@@ -6,10 +6,10 @@ export default function ServiceGrid() {
     <section className="py-10 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-2">
-          Hamare Services
+          Home Appliance Repair Services — Indore & Bhopal
         </h2>
         <p className="text-center text-gray-500 mb-8">
-          6 services, 10 cities — same day, verified technicians
+          AC • Fridge • Washing Machine • Geyser — All brands, same day, starting ₹299
         </p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {services.map((s) => (

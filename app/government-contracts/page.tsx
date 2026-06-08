@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import WhatsAppIcon from '@/components/WhatsAppIcon';
 import LeadForm from '@/components/LeadForm';
 
 export const metadata: Metadata = {
@@ -65,7 +66,7 @@ export default function GovernmentContractsPage() {
               <div className="mt-6 p-4 bg-[#1B4FD8]/10 rounded-xl">
                 <p className="font-bold text-[#1B4FD8] mb-1">B2B Inquiry Contact</p>
                 <p className="text-gray-700 text-sm">📞 +91 88895 39174</p>
-                <p className="text-gray-700 text-sm">💬 WhatsApp: +91 88895 39174</p>
+                <p className="flex items-center gap-1.5 text-gray-700 text-sm"><WhatsAppIcon className="w-4 h-4 text-[#25D366]" /> WhatsApp: +91 88895 39174</p>
               </div>
             </div>
           </div>

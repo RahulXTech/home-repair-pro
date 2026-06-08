@@ -20,7 +20,7 @@ export const blogContent: BlogPost[] = [
     excerpt: 'Garmi mein AC ki cooling kam ho jaaye toh tension hoti hai. Yahan 7 common reasons aur unke solutions bataye gaye hain.',
     date: '2025-05-15',
     readTime: '5 min',
-    image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80',
+    image: '/blog-ac-cooling.png',
     category: 'AC Repair',
     content: {
       intro: 'Garmi ke season mein agar aapka AC sahi se thanda nahi kar raha toh yeh bahut pareshani ki baat hai. India mein temperatures 45°C se upar jaate hain aur aise mein AC ka kaam nahi karna ek serious problem hai. Is article mein hum 7 main reasons discuss karenge kyon AC ki cooling kam ho jaati hai aur kuch problems aap ghar pe bhi fix kar sakte ho.',
@@ -69,7 +69,7 @@ export const blogContent: BlogPost[] = [
     excerpt: 'Washing machine ka paani drain nahi ho raha? Yeh 5 simple steps follow karo aur problem ghar pe fix karo.',
     date: '2025-05-20',
     readTime: '4 min',
-    image: 'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=800&q=80',
+    image: '/blog-washing.png',
     category: 'Washing Machine',
     content: {
       intro: 'Washing machine mein paani nahi nikal raha — yeh ek bahut common problem hai jo almost har ghar mein kabhi na kabhi hoti hai. Good news yeh hai ki zyaadatar cases mein yeh problem ghar pe fix ho sakti hai. Aaj hum 5 step-by-step solutions batayenge jo aap khud try kar sakte hain.',
@@ -110,7 +110,7 @@ export const blogContent: BlogPost[] = [
     excerpt: 'Fridge ki cooling problem ka matlab hamesha compressor nahi hota. Pehle yeh check karo.',
     date: '2025-05-25',
     readTime: '5 min',
-    image: 'https://images.pexels.com/photos/4116716/pexels-photo-4116716.jpeg?w=800',
+    image: '/blog-fridge.png',
     category: 'Refrigerator',
     content: {
       intro: 'Fridge thanda nahi kar raha — yeh ek aisi problem hai jisme aapka khaana kharab ho sakta hai aur financial loss bhi hota hai. Lekin ghabrana nahi, har case mein compressor replacement nahi chahiye hoti. Pehle simple reasons check karo — kai baar simple solution hota hai.',
@@ -151,7 +151,7 @@ export const blogContent: BlogPost[] = [
     excerpt: 'Indore aur Bhopal mein AC service kitne mein padti hai? Complete price breakdown yahan hai.',
     date: '2025-06-01',
     readTime: '6 min',
-    image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80',
+    image: '/blog-ac-cost.png',
     category: 'AC Repair',
     content: {
       intro: 'Indore aur Bhopal mein AC service ka cost kaafi vary karta hai. Kuch companies ₹200 mein service karti hain toh kuch ₹2,000+ charge karti hain. Is guide mein hum 2025 ka updated price data share kar rahe hain — taaki aap informed decision le sako aur overcharge nahi ho.',
@@ -192,7 +192,7 @@ export const blogContent: BlogPost[] = [
     excerpt: 'Subah thanda paani mil raha hai? Geyser ki yeh 6 common problems check karo.',
     date: '2025-06-05',
     readTime: '4 min',
-    image: 'https://images.pexels.com/photos/4116724/pexels-photo-4116724.jpeg?w=800',
+    image: '/blog-geyser.png',
     category: 'Geyser',
     content: {
       intro: 'Subah uthke naha ne jaao aur geyser se thanda paani aaye — yeh ek nightmare hai especially winters mein. Geyser garam paani nahi de raha ke kai reasons ho sakte hain — kuch ghar pe solve ho sakte hain, kuch ke liye technician chahiye. Yahan 6 main reasons aur solutions hain.',

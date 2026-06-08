@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import WhatsAppIcon from '@/components/WhatsAppIcon';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import LeadForm from '@/components/LeadForm';
@@ -85,7 +86,7 @@ export default async function LandingPage({ params }: Props) {
             rel="noopener noreferrer"
             className="flex-1 flex items-center justify-center gap-2 bg-[#25D366] hover:bg-green-500 text-white font-black py-5 px-6 rounded-2xl text-xl shadow-lg"
           >
-            💬 WhatsApp Now
+            <WhatsAppIcon className="w-6 h-6" /> WhatsApp Now
           </a>
         </div>
 
@@ -182,7 +183,7 @@ export default async function LandingPage({ params }: Props) {
           rel="noopener noreferrer"
           className="flex-1 bg-[#25D366] text-white text-base font-bold py-4 flex items-center justify-center gap-1"
         >
-          💬 WhatsApp
+          <WhatsAppIcon className="w-5 h-5" /> WhatsApp
         </a>
       </div>
     </div>

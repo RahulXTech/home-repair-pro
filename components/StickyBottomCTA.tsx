@@ -1,4 +1,5 @@
 'use client';
+import WhatsAppIcon from '@/components/WhatsAppIcon';
 
 export default function StickyBottomCTA() {
   const handleCall = () => {
@@ -29,7 +30,7 @@ export default function StickyBottomCTA() {
         onClick={handleWA}
         className="flex-1 flex items-center justify-center gap-2 bg-[#25D366] text-white py-4 text-base font-bold"
       >
-        💬 WhatsApp
+        <WhatsAppIcon className="w-5 h-5" /> WhatsApp
       </a>
     </div>
   );

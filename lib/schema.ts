@@ -5,7 +5,7 @@ export function localBusinessSchema() {
     name: 'HomeRepairPro',
     telephone: '+918889539174',
     url: 'https://homerepairpro.in',
-    logo: 'https://homerepairpro.in/logo.png',
+    logo: 'https://www.homerepairpro.in/logo-round.png',
     description:
       'HomeRepairPro — Professional home appliance repair service. AC, Washing Machine, Refrigerator, Chimney, Geyser, Microwave repair in Indore, Bhopal and 8 more cities.',
     address: {

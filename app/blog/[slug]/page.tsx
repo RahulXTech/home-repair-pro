@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import WhatsAppIcon from '@/components/WhatsAppIcon';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -111,9 +112,9 @@ export default async function BlogPostPage({ params }: Props) {
               href="https://wa.me/918889539174"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#25D366] text-white font-bold px-6 py-3 rounded-xl hover:bg-green-500"
+              className="flex items-center justify-center gap-2 bg-[#25D366] text-white font-bold px-6 py-3 rounded-xl hover:bg-green-500"
             >
-              💬 WhatsApp Now
+              <WhatsAppIcon className="w-5 h-5" /> WhatsApp Now
             </a>
           </div>
         </div>

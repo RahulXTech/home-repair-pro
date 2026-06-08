@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import WhatsAppIcon from '@/components/WhatsAppIcon';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import LeadForm from '@/components/LeadForm';
@@ -130,7 +131,7 @@ export default async function ServiceCityPage({ params }: Props) {
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 bg-[#25D366] text-white font-bold py-4 px-6 rounded-xl text-base w-full sm:w-auto"
             >
-              💬 WhatsApp
+              <WhatsAppIcon className="w-5 h-5" /> WhatsApp
             </a>
           </div>
         </div>
@@ -164,6 +165,44 @@ export default async function ServiceCityPage({ params }: Props) {
             <p>
               {city.name} ke alawa hum Indore, Bhopal, Ujjain, Jabalpur aur aur cities mein bhi service dete hain. Sab repairs pe 30-day warranty milti hai — agar same problem dobara aaye toh free fix karenge. {city.name} mein {service.name} ke liye aaj hi call karo: +91 88895 39174.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Areas We Cover */}
+      <section className="py-10 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            Areas We Cover in {city.name}
+          </h2>
+          <p className="text-gray-500 text-sm mb-6">
+            {service.name} available across all major localities of {city.name} — same day service guaranteed.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {city.localities.map((area) => (
+              <span key={area} className="px-3 py-1.5 bg-blue-50 text-[#1B4FD8] rounded-full text-sm border border-blue-200">
+                📍 {area}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* All Brands We Repair */}
+      <section className="py-10 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            All Brands We Repair — {service.name}
+          </h2>
+          <p className="text-gray-500 text-sm mb-6">
+            Expert technicians for all major brands. Any model, any year — we fix it.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {service.brands.map((brand) => (
+              <span key={brand} className="px-3 py-1.5 bg-orange-50 text-[#F97316] rounded-full text-sm border border-orange-200 font-medium">
+                ✓ {brand}
+              </span>
+            ))}
           </div>
         </div>
       </section>

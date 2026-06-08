@@ -65,7 +65,7 @@ export default function AboutPage() {
             </div>
             <div className="relative h-64 rounded-2xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80"
+                src="/about-technician.png"
                 alt="HomeRepairPro technician at work"
                 fill
                 className="object-cover"

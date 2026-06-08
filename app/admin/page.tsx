@@ -362,32 +362,187 @@ export default function AdminPage() {
 
             {/* Target Keywords */}
             <div className="bg-gray-900 rounded-xl p-5 border border-gray-800 mb-5">
-              <h3 className="font-bold text-gray-300 mb-4">🎯 Target Keywords — Indore/Bhopal</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                {[
-                  { kw: 'ac repair indore', vol: '1K-10K', diff: 'Medium', status: '🟡' },
-                  { kw: 'ac service indore', vol: '1K-10K', diff: 'Medium', status: '🟡' },
-                  { kw: 'washing machine repair indore', vol: '500-1K', diff: 'Low', status: '🟢' },
-                  { kw: 'refrigerator repair indore', vol: '500-1K', diff: 'Low', status: '🟢' },
-                  { kw: 'ac repair bhopal', vol: '500-1K', diff: 'Low', status: '🟢' },
-                  { kw: 'geyser repair indore', vol: '100-500', diff: 'Low', status: '🟢' },
-                  { kw: 'ac repair ujjain', vol: '100-500', diff: 'Very Low', status: '🟢' },
-                  { kw: 'ac repair dewas', vol: '100', diff: 'Very Low', status: '🟢' },
-                  { kw: 'chimney cleaning indore', vol: '100-500', diff: 'Low', status: '🟢' },
-                  { kw: 'microwave repair indore', vol: '100-500', diff: 'Low', status: '🟢' },
-                ].map((row) => (
-                  <div key={row.kw} className="flex items-center gap-3 bg-gray-800 rounded-lg px-3 py-2">
-                    <span>{row.status}</span>
-                    <span className="text-sm font-mono text-blue-300 flex-1">{row.kw}</span>
-                    <span className="text-xs text-gray-500">{row.vol}/mo</span>
-                    <span className={`text-xs px-2 py-0.5 rounded font-bold ${
-                      row.diff === 'Very Low' ? 'bg-green-900 text-green-400' :
-                      row.diff === 'Low' ? 'bg-teal-900 text-teal-400' :
-                      'bg-yellow-900 text-yellow-400'
-                    }`}>{row.diff}</span>
+              <h3 className="font-bold text-gray-300 mb-5">🎯 Target Keywords — All Services + Cities</h3>
+
+              {[
+                {
+                  service: '❄️ AC Repair',
+                  color: 'text-blue-400',
+                  season: '🔴 Off Season',
+                  keywords: [
+                    { kw: 'ac repair indore', vol: '10K-100K', diff: 'High', cpc: '₹20-40' },
+                    { kw: 'ac service indore', vol: '10K-100K', diff: 'High', cpc: '₹18-35' },
+                    { kw: 'ac repair near me', vol: '10K-100K', diff: 'High', cpc: '₹25-50' },
+                    { kw: 'ac technician near me', vol: '1K-10K', diff: 'Medium', cpc: '₹15-30' },
+                    { kw: 'ac repair bhopal', vol: '1K-10K', diff: 'Medium', cpc: '₹15-28' },
+                    { kw: 'ac service center indore', vol: '1K-10K', diff: 'Medium', cpc: '₹12-25' },
+                    { kw: 'ac gas filling indore', vol: '1K-10K', diff: 'Medium', cpc: '₹12-22' },
+                    { kw: 'ac not cooling indore', vol: '1K-10K', diff: 'Low', cpc: '₹10-18' },
+                    { kw: 'split ac repair indore', vol: '500-1K', diff: 'Low', cpc: '₹8-15' },
+                    { kw: 'voltas ac service indore', vol: '500-1K', diff: 'Low', cpc: '₹8-14' },
+                    { kw: 'daikin ac service indore', vol: '500-1K', diff: 'Low', cpc: '₹8-14' },
+                    { kw: 'lg ac repair indore', vol: '500-1K', diff: 'Low', cpc: '₹8-14' },
+                    { kw: 'samsung ac repair indore', vol: '500-1K', diff: 'Low', cpc: '₹8-14' },
+                    { kw: 'carrier ac repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-10' },
+                    { kw: 'ac repair ujjain', vol: '100-500', diff: 'Very Low', cpc: '₹4-8' },
+                    { kw: 'ac repair dewas', vol: '100-500', diff: 'Very Low', cpc: '₹3-7' },
+                    { kw: 'ac repair mhow', vol: '100', diff: 'Very Low', cpc: '₹3-6' },
+                    { kw: 'ac repair jabalpur', vol: '500-1K', diff: 'Very Low', cpc: '₹5-10' },
+                    { kw: 'ac repair sehore', vol: '100', diff: 'Very Low', cpc: '₹3-6' },
+                    { kw: 'window ac repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-10' },
+                  ],
+                },
+                {
+                  service: '🫧 Washing Machine Repair',
+                  color: 'text-cyan-400',
+                  season: '🟢 All Season',
+                  keywords: [
+                    { kw: 'washing machine repair indore', vol: '1K-10K', diff: 'Medium', cpc: '₹12-22' },
+                    { kw: 'washing machine repair near me', vol: '10K-100K', diff: 'High', cpc: '₹20-40' },
+                    { kw: 'washing machine repair bhopal', vol: '1K-10K', diff: 'Medium', cpc: '₹10-20' },
+                    { kw: 'washing machine service indore', vol: '1K-10K', diff: 'Medium', cpc: '₹10-18' },
+                    { kw: 'washing machine not working indore', vol: '500-1K', diff: 'Low', cpc: '₹8-15' },
+                    { kw: 'washing machine not draining indore', vol: '500-1K', diff: 'Low', cpc: '₹7-13' },
+                    { kw: 'front load washing machine repair indore', vol: '500-1K', diff: 'Low', cpc: '₹8-15' },
+                    { kw: 'fully automatic washing machine repair indore', vol: '500-1K', diff: 'Low', cpc: '₹8-14' },
+                    { kw: 'semi automatic washing machine repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-10' },
+                    { kw: 'lg washing machine repair indore', vol: '500-1K', diff: 'Low', cpc: '₹7-13' },
+                    { kw: 'samsung washing machine repair indore', vol: '500-1K', diff: 'Low', cpc: '₹7-13' },
+                    { kw: 'whirlpool washing machine repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-10' },
+                    { kw: 'bosch washing machine repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-10' },
+                    { kw: 'ifb washing machine repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-10' },
+                    { kw: 'washing machine drum not rotating indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-9' },
+                    { kw: 'washing machine repair ujjain', vol: '100-500', diff: 'Very Low', cpc: '₹4-8' },
+                    { kw: 'washing machine repair dewas', vol: '100', diff: 'Very Low', cpc: '₹3-7' },
+                    { kw: 'washing machine repair jabalpur', vol: '100-500', diff: 'Very Low', cpc: '₹4-8' },
+                  ],
+                },
+                {
+                  service: '🧊 Refrigerator Repair',
+                  color: 'text-teal-400',
+                  season: '🟢 All Season',
+                  keywords: [
+                    { kw: 'refrigerator repair indore', vol: '1K-10K', diff: 'Medium', cpc: '₹12-22' },
+                    { kw: 'fridge repair indore', vol: '1K-10K', diff: 'Medium', cpc: '₹10-20' },
+                    { kw: 'fridge repair near me', vol: '10K-100K', diff: 'High', cpc: '₹18-35' },
+                    { kw: 'refrigerator repair bhopal', vol: '500-1K', diff: 'Low', cpc: '₹8-16' },
+                    { kw: 'fridge not cooling indore', vol: '500-1K', diff: 'Low', cpc: '₹8-15' },
+                    { kw: 'fridge compressor repair indore', vol: '500-1K', diff: 'Low', cpc: '₹10-18' },
+                    { kw: 'refrigerator gas filling indore', vol: '500-1K', diff: 'Low', cpc: '₹8-15' },
+                    { kw: 'double door fridge repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹6-12' },
+                    { kw: 'single door fridge repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-10' },
+                    { kw: 'lg fridge repair indore', vol: '500-1K', diff: 'Low', cpc: '₹7-13' },
+                    { kw: 'samsung fridge repair indore', vol: '500-1K', diff: 'Low', cpc: '₹7-13' },
+                    { kw: 'whirlpool fridge repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-10' },
+                    { kw: 'godrej fridge repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-10' },
+                    { kw: 'haier fridge repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-10' },
+                    { kw: 'refrigerator repair ujjain', vol: '100-500', diff: 'Very Low', cpc: '₹4-8' },
+                    { kw: 'fridge repair jabalpur', vol: '100-500', diff: 'Very Low', cpc: '₹4-8' },
+                    { kw: 'fridge making noise indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-9' },
+                    { kw: 'fridge water leaking indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-9' },
+                  ],
+                },
+                {
+                  service: '🚿 Geyser Repair',
+                  color: 'text-orange-400',
+                  season: '🟢 Peak Season (Oct-Feb)',
+                  keywords: [
+                    { kw: 'geyser repair indore', vol: '1K-10K', diff: 'Medium', cpc: '₹10-20' },
+                    { kw: 'water heater repair indore', vol: '1K-10K', diff: 'Medium', cpc: '₹10-18' },
+                    { kw: 'geyser repair near me', vol: '1K-10K', diff: 'Medium', cpc: '₹12-22' },
+                    { kw: 'geyser repair bhopal', vol: '500-1K', diff: 'Low', cpc: '₹8-15' },
+                    { kw: 'geyser not heating water indore', vol: '500-1K', diff: 'Low', cpc: '₹8-14' },
+                    { kw: 'geyser service indore', vol: '500-1K', diff: 'Low', cpc: '₹7-13' },
+                    { kw: 'geyser installation indore', vol: '500-1K', diff: 'Low', cpc: '₹8-15' },
+                    { kw: 'instant geyser repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-10' },
+                    { kw: 'storage geyser repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-10' },
+                    { kw: 'bajaj geyser repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-9' },
+                    { kw: 'havells geyser repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-9' },
+                    { kw: 'racold geyser repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-9' },
+                    { kw: 'ao smith geyser repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-10' },
+                    { kw: 'geyser leaking repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-9' },
+                    { kw: 'geyser tripping indore', vol: '100-500', diff: 'Very Low', cpc: '₹4-8' },
+                    { kw: 'geyser repair ujjain', vol: '100-500', diff: 'Very Low', cpc: '₹4-8' },
+                    { kw: 'geyser repair dewas', vol: '100', diff: 'Very Low', cpc: '₹3-7' },
+                    { kw: 'geyser repair jabalpur', vol: '100-500', diff: 'Very Low', cpc: '₹4-8' },
+                  ],
+                },
+                {
+                  service: '🍳 Chimney Cleaning',
+                  color: 'text-yellow-400',
+                  season: '🟢 All Season',
+                  keywords: [
+                    { kw: 'chimney cleaning indore', vol: '500-1K', diff: 'Low', cpc: '₹8-15' },
+                    { kw: 'kitchen chimney repair indore', vol: '500-1K', diff: 'Low', cpc: '₹8-15' },
+                    { kw: 'chimney cleaning near me', vol: '1K-10K', diff: 'Medium', cpc: '₹10-20' },
+                    { kw: 'chimney cleaning bhopal', vol: '500-1K', diff: 'Low', cpc: '₹7-13' },
+                    { kw: 'chimney repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹6-12' },
+                    { kw: 'chimney suction not working indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-10' },
+                    { kw: 'chimney service indore', vol: '500-1K', diff: 'Low', cpc: '₹7-13' },
+                    { kw: 'elica chimney repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-10' },
+                    { kw: 'faber chimney repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-10' },
+                    { kw: 'glen chimney repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-9' },
+                    { kw: 'hindware chimney repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-9' },
+                    { kw: 'prestige chimney repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-9' },
+                    { kw: 'chimney filter cleaning indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-9' },
+                    { kw: 'auto clean chimney service indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-10' },
+                    { kw: 'chimney cleaning ujjain', vol: '100', diff: 'Very Low', cpc: '₹3-7' },
+                    { kw: 'chimney repair bhopal', vol: '100-500', diff: 'Very Low', cpc: '₹5-9' },
+                  ],
+                },
+                {
+                  service: '📡 Microwave Repair',
+                  color: 'text-pink-400',
+                  season: '🟢 All Season',
+                  keywords: [
+                    { kw: 'microwave repair indore', vol: '500-1K', diff: 'Low', cpc: '₹8-15' },
+                    { kw: 'microwave oven repair near me', vol: '1K-10K', diff: 'Medium', cpc: '₹10-20' },
+                    { kw: 'microwave repair bhopal', vol: '500-1K', diff: 'Low', cpc: '₹7-13' },
+                    { kw: 'microwave not heating indore', vol: '500-1K', diff: 'Low', cpc: '₹7-13' },
+                    { kw: 'microwave oven repair indore', vol: '500-1K', diff: 'Low', cpc: '₹8-14' },
+                    { kw: 'lg microwave repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-10' },
+                    { kw: 'samsung microwave repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-10' },
+                    { kw: 'ifb microwave repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-10' },
+                    { kw: 'convection microwave repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-9' },
+                    { kw: 'solo microwave repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹4-8' },
+                    { kw: 'microwave door not opening indore', vol: '100-500', diff: 'Very Low', cpc: '₹4-8' },
+                    { kw: 'microwave sparking repair indore', vol: '100-500', diff: 'Very Low', cpc: '₹4-8' },
+                    { kw: 'microwave repair ujjain', vol: '100', diff: 'Very Low', cpc: '₹3-7' },
+                    { kw: 'microwave service center indore', vol: '100-500', diff: 'Very Low', cpc: '₹5-10' },
+                  ],
+                },
+              ].map((group) => (
+                <div key={group.service} className="mb-7">
+                  <div className="flex items-center gap-3 mb-3">
+                    <h4 className={`font-bold text-sm ${group.color}`}>{group.service}</h4>
+                    <span className="text-xs bg-gray-800 px-2 py-0.5 rounded-full text-gray-400">{group.season}</span>
+                    <span className="text-xs text-gray-600 ml-auto">{group.keywords.length} keywords</span>
                   </div>
-                ))}
-              </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    {group.keywords.map((row) => (
+                      <div key={row.kw} className={`flex items-center gap-2 rounded-lg px-3 py-2 ${
+                        row.diff === 'High' ? 'bg-red-950 border border-red-900/40' :
+                        row.diff === 'Medium' ? 'bg-yellow-950 border border-yellow-900/40' :
+                        'bg-gray-800 border border-gray-700/40'
+                      }`}>
+                        <span className="text-xs flex-shrink-0">{
+                          row.diff === 'High' ? '🔴' :
+                          row.diff === 'Medium' ? '🟡' : '🟢'
+                        }</span>
+                        <span className="text-xs font-mono text-gray-200 flex-1 min-w-0 truncate">{row.kw}</span>
+                        <span className="text-xs text-gray-500 whitespace-nowrap flex-shrink-0">{row.vol}</span>
+                        <span className="text-xs text-green-400 whitespace-nowrap flex-shrink-0 font-mono">{(row as any).cpc}</span>
+                        <span className={`text-xs px-1.5 py-0.5 rounded font-bold whitespace-nowrap flex-shrink-0 ${
+                          row.diff === 'High' ? 'bg-red-900 text-red-400' :
+                          row.diff === 'Medium' ? 'bg-yellow-900 text-yellow-400' :
+                          row.diff === 'Low' ? 'bg-teal-900 text-teal-400' :
+                          'bg-green-900 text-green-400'
+                        }`}>{row.diff}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
 
             {/* Competitors */}

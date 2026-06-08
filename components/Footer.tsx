@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import WhatsAppIcon from '@/components/WhatsAppIcon';
+import Image from 'next/image';
 import { services, cities } from '@/lib/data';
 
 export default function Footer() {
@@ -7,7 +9,16 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-2 md:col-span-1">
-            <h3 className="text-white font-black text-lg mb-3">🔧 HomeRepairPro</h3>
+            <Link href="/" className="inline-block mb-3">
+              <Image
+                src="/logo-round.png"
+                alt="HomeRepairPro"
+                width={72}
+                height={72}
+                className="rounded-full"
+                loading="lazy"
+              />
+            </Link>
             <p className="text-sm mb-4 leading-relaxed">
               Ghar Ki Har Repair — Ek Call Mein. Verified technicians, same day service, GST & MSME registered.
             </p>
@@ -21,7 +32,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-[#25D366] font-bold hover:text-green-400"
               >
-                💬 WhatsApp Us
+                <WhatsAppIcon className="w-4 h-4" /> WhatsApp Us
               </a>
             </div>
           </div>
