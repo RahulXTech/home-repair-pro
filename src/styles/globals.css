@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #1B4FD8;
+  --primary-dark: #0D2B8A;
+  --accent: #F97316;
+  --whatsapp: #25D366;
+}
+
+body {
+  background: #ffffff;
+  color: #111111;
+}
+
+/* ─── Hide scrollbar but allow scrolling ─── */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ─── Mobile bottom padding for sticky CTA ─── */
+@media (max-width: 768px) {
+  main {
+    padding-bottom: 64px;
+  }
+}
+
+/* ─── Float animation (hero image) ─── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+.animate-float { animation: float 4s ease-in-out infinite; }
+
+/* ─── Glow pulse (decorative blobs) ─── */
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50%       { opacity: 0.45; transform: scale(1.08); }
+}
+.animate-glow { animation: glow-pulse 3.5s ease-in-out infinite; }
+
+/* ─── Text gradient (orange-yellow) ─── */
+.text-gradient {
+  background: linear-gradient(135deg, #F97316, #FBBF24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Card hover lift ─── */
+.card-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -10px rgba(27, 79, 216, 0.18);
+}
+
+/* ─────────────────────────────────────────────
+   HERO SLIDER — image & text animations
+───────────────────────────────────────────────*/
+
+/* Image zooms in gently on slide change */
+@keyframes heroImgSlide {
+  from { opacity: 0; transform: scale(1.06); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.hero-img-slide {
+  animation: heroImgSlide 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Text slides in from left */
+@keyframes heroTextSlide {
+  from { opacity: 0; transform: translateX(-24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.hero-text-slide {
+  animation: heroTextSlide 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Legacy — kept so other pages using slide-fade-in don't break */
+@keyframes slideFadeIn {
+  from { opacity: 0; transform: translateX(28px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.slide-fade-in {
+  animation: slideFadeIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ─── Section heading underline accent ─── */
+.section-accent {
+  display: block;
+  width: 3rem;
+  height: 3px;
+  background: #F97316;
+  border-radius: 9999px;
+  margin: 0.5rem auto 0;
+}
