@@ -1,7 +1,7 @@
 const brands = [
   'LG', 'Samsung', 'Voltas', 'Daikin', 'Whirlpool', 'Bosch', 'IFB',
   'Godrej', 'Haier', 'Panasonic', 'Hitachi', 'Carrier', 'Blue Star',
-  'O General', 'Bajaj', 'Havells', 'Racold', 'AO Smith', 'Elica', 'Faber', 'Siemens',
+  'O General', 'Bajaj', 'Havells', 'Racold', 'AO Smith', 'Elica', 'Faber', 'Siemens', 'More Brands...'
 ];
 
 export default function BrandLogos() {

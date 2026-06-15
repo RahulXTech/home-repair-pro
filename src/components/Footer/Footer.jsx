@@ -23,44 +23,46 @@ const seoLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-sky-500 text-white pt-8">
+    <footer className="bg-sky-500 text-white pt-6">
       <div className="max-w-6xl mx-auto px-4">
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* 2-col on mobile → 4-col on desktop; About spans full width on mobile */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
 
-          <div>
-            <h3 className="text-xl font-bold mb-1">About Us</h3>
-            <div className="w-10 h-0.5 bg-white mb-4"></div>
+          {/* About — full width on mobile */}
+          <div className="col-span-2 lg:col-span-1">
+            <h3 className="text-base font-bold mb-1">About Us</h3>
+            <div className="w-8 h-0.5 bg-white mb-3" />
 
-            <Link href="/" className="inline-block mb-3">
-              <Image
-                src="/images/logo-round.png"
-                alt="HomeRepairPro"
-                width={60}
-                height={60}
-                className="rounded-full bg-white p-1"
-              />
-            </Link>
+            <div className="flex items-center gap-3 mb-2">
+              <Link href="/">
+                <Image
+                  src="/images/logo-round.png"
+                  alt="HomeRepairPro"
+                  width={48}
+                  height={48}
+                  className="rounded-full bg-white p-1"
+                />
+              </Link>
+              <p className="text-xs leading-5 text-white/90">
+                Ghar Ki Har Repair — Ek Call Mein. Verified technicians, same day service, GST &amp; MSME registered.
+              </p>
+            </div>
 
-            <p className="text-sm leading-6 text-white/90 mb-4">
-              Ghar Ki Har Repair — Ek Call Mein. Verified technicians,
-              same day service, GST & MSME registered.
-            </p>
-
-            <h4 className="font-semibold mb-3">Follow Us</h4>
-
+            <h4 className="font-semibold text-sm mb-2">Follow Us</h4>
             <div className="flex gap-2">
-              <div className="w-8 h-8 rounded-full bg-blue-700 flex items-center justify-center">f</div>
-              <div className="w-8 h-8 rounded-full bg-pink-500 flex items-center justify-center">i</div>
-              <div className="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center">▶</div>
-              <div className="w-8 h-8 rounded-full bg-blue-900 flex items-center justify-center">in</div>
+              <div className="w-7 h-7 rounded-full bg-blue-700 flex items-center justify-center text-xs">f</div>
+              <div className="w-7 h-7 rounded-full bg-pink-500 flex items-center justify-center text-xs">i</div>
+              <div className="w-7 h-7 rounded-full bg-red-600 flex items-center justify-center text-xs">▶</div>
+              <div className="w-7 h-7 rounded-full bg-blue-900 flex items-center justify-center text-xs">in</div>
             </div>
           </div>
 
+          {/* Services */}
           <div>
-            <h3 className="text-xl font-bold mb-1">Services</h3>
-            <div className="w-10 h-0.5 bg-white mb-4"></div>
-            <ul className="space-y-1.5 text-sm">
+            <h3 className="text-base font-bold mb-1">Services</h3>
+            <div className="w-8 h-0.5 bg-white mb-3" />
+            <ul className="space-y-1 text-xs">
               {services.map((service) => (
                 <li key={service.slug}>
                   <Link href={`/${service.slug}-indore`} className="hover:underline">
@@ -71,10 +73,11 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Cities */}
           <div>
-            <h3 className="text-xl font-bold mb-1">Cities</h3>
-            <div className="w-10 h-0.5 bg-white mb-4"></div>
-            <ul className="space-y-1.5 text-sm">
+            <h3 className="text-base font-bold mb-1">Cities</h3>
+            <div className="w-8 h-0.5 bg-white mb-3" />
+            <ul className="space-y-1 text-xs">
               {cities.map((city) => (
                 <li key={city.slug}>
                   <Link href={`/ac-repair-${city.slug}`} className="hover:underline">
@@ -85,10 +88,11 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Contact */}
           <div>
-            <h3 className="text-xl font-bold mb-1">Reach Us</h3>
-            <div className="w-10 h-0.5 bg-white mb-4"></div>
-            <div className="space-y-3 text-sm">
+            <h3 className="text-base font-bold mb-1">Reach Us</h3>
+            <div className="w-8 h-0.5 bg-white mb-3" />
+            <div className="space-y-2 text-xs">
               <p>📍 HomeRepairPro<br />Madhya Pradesh, India</p>
               <a href="tel:+918889539174" className="block hover:underline">📞 +91 88895 39174</a>
               <p>📧 support@homerepairpro.in</p>
@@ -96,9 +100,9 @@ export default function Footer() {
                 href="https://wa.me/918889539174"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 hover:underline"
+                className="inline-flex items-center gap-1.5 hover:underline"
               >
-                <WhatsAppIcon className="w-4 h-4" />
+                <WhatsAppIcon className="w-3.5 h-3.5" />
                 WhatsApp Us
               </a>
             </div>
@@ -106,24 +110,28 @@ export default function Footer() {
 
         </div>
 
-        <div className="border-t border-white/30 mt-6 pt-4 pb-4 text-sm">
-          <span className="font-semibold">Related Search :</span>{' '}
-          {seoLinks.map((link, index) => (
+        {/* SEO links */}
+        <div className="border-t border-white/30 mt-4 pt-3 pb-3 text-xs leading-relaxed">
+          <span className="font-semibold">Related Search: </span>
+          {seoLinks.map((link, i) => (
             <span key={link.label}>
               <Link href={link.href} className="hover:underline">{link.label}</Link>
-              {index !== seoLinks.length - 1 && ' | '}
+              {i !== seoLinks.length - 1 && ' | '}
             </span>
           ))}
         </div>
 
       </div>
 
-      <div className="bg-blue-900 py-3">
-        <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs">
+      {/* Copyright bar */}
+      <div className="bg-blue-900 py-2">
+        <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-1 text-xs">
           <p>© 2026 HomeRepairPro. All Rights Reserved.</p>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-2 text-white/80">
             <span>GST: 23DNCPG4775E1Z7</span>
+            <span>·</span>
             <span>MSME: UDYAM-MP-10-0042011</span>
+            <span>·</span>
             <span>Verified Service Provider</span>
           </div>
         </div>

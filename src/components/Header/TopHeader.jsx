@@ -28,12 +28,12 @@ export default function TopHeader() {
           {/* Left — brand + hours */}
           <div className="flex items-center gap-3 text-[11px]">
             <span className="font-bold text-white tracking-wide hidden sm:inline">
-              M/s SINTEREEORS
+              HomeRepairPro
             </span>
             <span className="hidden sm:block h-3 w-px bg-white/20" />
             <span className="flex items-center gap-1 text-sky-300 hidden md:flex">
               <FaClock className="text-[9px]" />
-              <span>Mon – Sat &nbsp;9 AM – 7 PM</span>
+              <span>All &nbsp; Days &nbsp; - 24X7</span>
             </span>
           </div>
 
@@ -53,13 +53,13 @@ export default function TopHeader() {
 
             {/* Phone */}
             <a
-              href="tel:+919869329551"
+              href="tel:+91 8889539174"
               className="flex items-center gap-1.5 font-semibold text-white hover:text-sky-300 transition-colors duration-200"
             >
               <span className="w-5 h-5 flex items-center justify-center rounded-full bg-sky-500/30 border border-sky-500/50">
                 <FaPhoneAlt className="text-sky-300 text-[8px]" />
               </span>
-              <span className="hidden sm:inline">+91 98693 29551</span>
+              <span className="hidden sm:inline">+91 8889539174</span>
             </a>
 
             <span className="h-3 w-px bg-white/20" />

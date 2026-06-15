@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import Image from 'next/image';
 import WhatsAppIcon from '@/components/common/WhatsAppIcon';
 import { services, cities } from '@/utils/data';
@@ -13,6 +13,7 @@ const slides = [
     stats: [['5,000+', 'Repairs Done'], ['4.8/5', 'Google Rating'], ['30-Day', 'Warranty']],
     image: '/images/hero-all-appliances.png',
     imageAlt: 'HomeRepairPro — All Home Appliance Repair Services',
+    objectFit: 'object-contain',
   },
   {
     badge: '🏆 Verified Technicians · All Brands',
@@ -23,19 +24,36 @@ const slides = [
     image: '/images/hero-ac-repair.png',
     imageAlt: 'AC Repair Service — HomeRepairPro Technician',
   },
+  {
+    badge: '🛠️ Expert Technicians · Home & Kitchen',
+    headline: 'Fridge Band Ho Gaya?',
+    accent: 'Turant Repair!',
+    sub: 'Cooling problem, compressor, gas leak — sab theek. All brands, same day service aapke city mein.',
+    stats: [['₹399+', 'Fridge Repair'], ['Same Day', 'Service'], ['All Models', 'Covered']],
+    image: '/images/hero-fridge-repair.png',
+    imageAlt: 'Fridge Repair Service — HomeRepairPro',
+  },
+  {
+    badge: '⭐ Trusted by 5000+ Customers',
+    headline: 'Professional Repair',
+    accent: 'Doorstep Par!',
+    sub: 'Trained technicians, genuine parts, GST invoice. AC, fridge, washing machine — sab ek jagah.',
+    stats: [['5,000+', 'Happy Customers'], ['4.8★', 'Rating'], ['30-Day', 'Warranty']],
+    image: '/images/About_Section_right.png',
+    imageAlt: 'HomeRepairPro — Professional Repair Service',
+  },
 ];
 
 export default function HeroSlider() {
   const [active, setActive]   = useState(0);
   const [paused, setPaused]   = useState(false);
-  const [animKey, setAnimKey] = useState(0);
   const [phone, setPhone]     = useState('');
   const [service, setService] = useState('');
   const [city, setCity]       = useState('');
+  const dragX = useRef(null);
 
   const goTo = useCallback((idx) => {
     setActive(idx);
-    setAnimKey((k) => k + 1);
   }, []);
 
   const next = useCallback(() => goTo((active + 1) % slides.length), [active, goTo]);
@@ -43,9 +61,17 @@ export default function HeroSlider() {
 
   useEffect(() => {
     if (paused) return;
-    const t = setInterval(next, 6000);
+    const t = setInterval(next, 3000);
     return () => clearInterval(t);
   }, [next, paused]);
+
+  const onDragStart = (clientX) => { dragX.current = clientX; };
+  const onDragEnd   = (clientX) => {
+    if (dragX.current === null) return;
+    const diff = dragX.current - clientX;
+    if (Math.abs(diff) > 40) { diff > 0 ? next() : prev(); }
+    dragX.current = null;
+  };
 
   const handleBook = () => {
     const svc = service || 'home appliance repair';
@@ -55,8 +81,6 @@ export default function HeroSlider() {
     window.open(`https://wa.me/918889539174?text=${encodeURIComponent(msg)}`, '_blank');
   };
 
-  const s = slides[active];
-
   return (
     <section
       className="relative flex flex-col lg:flex-row min-h-[520px] lg:min-h-[600px] overflow-hidden bg-[#040d1f]"
@@ -64,20 +88,33 @@ export default function HeroSlider() {
       onMouseLeave={() => setPaused(false)}
     >
       {/* ══ LEFT — FULL-BLEED IMAGE SLIDER (reference style) ══ */}
-      <div className="relative flex-1 overflow-hidden min-h-[400px] lg:min-h-0">
+      <div
+        className="relative flex-1 overflow-hidden min-h-[400px] lg:min-h-0 cursor-grab active:cursor-grabbing select-none"
+        onTouchStart={(e) => onDragStart(e.touches[0].clientX)}
+        onTouchEnd={(e) => onDragEnd(e.changedTouches[0].clientX)}
+        onMouseDown={(e) => onDragStart(e.clientX)}
+        onMouseUp={(e) => onDragEnd(e.clientX)}
+        onMouseLeave={() => { dragX.current = null; }}
+      >
 
-        {/* Background image — full bleed, no heavy overlay */}
-        <div key={`img-${animKey}`} className="absolute inset-0 hero-img-slide">
-          <Image
-            src={s.image}
-            alt={s.imageAlt}
-            fill
-            priority={active === 0}
-            quality={92}
-            className="object-cover object-center"
-            sizes="(max-width: 1024px) 100vw, 65vw"
-          />
-        </div>
+        {/* Background images — all stacked, crossfade via opacity */}
+        {slides.map((slide, i) => (
+          <div
+            key={slide.image}
+            className="absolute inset-0 transition-opacity duration-[1200ms] ease-in-out"
+            style={{ opacity: i === active ? 1 : 0 }}
+          >
+            <Image
+              src={slide.image}
+              alt={slide.imageAlt}
+              fill
+              priority={i === 0}
+              quality={92}
+              className={`${slide.objectFit ?? 'object-cover'} object-center`}
+              sizes="(max-width: 1024px) 100vw, 65vw"
+            />
+          </div>
+        ))}
 
         {/* Only a light gradient at bottom for text — image stays bright like reference */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent pointer-events-none" />
@@ -101,76 +138,85 @@ export default function HeroSlider() {
           ›
         </button>
 
-        {/* ── BOTTOM CONTENT ── */}
-        <div key={`txt-${animKey}`} className="absolute inset-x-0 bottom-0 z-10 px-5 sm:px-8 lg:px-10 pb-6 hero-text-slide">
+        {/* ── BOTTOM CONTENT — all slides stacked, crossfade ── */}
+        {slides.map((slide, i) => (
+          <div
+            key={slide.image + '-txt'}
+            className="absolute inset-x-0 bottom-0 z-10 px-5 sm:px-8 lg:px-10 pb-6 transition-all duration-[900ms] ease-in-out"
+            style={{
+              opacity: i === active ? 1 : 0,
+              transform: i === active ? 'translateX(0)' : 'translateX(-20px)',
+              pointerEvents: i === active ? 'auto' : 'none',
+            }}
+          >
+            {/* Badge pill */}
+            <div className="inline-flex items-center gap-2 bg-[#F97316]/20 border border-[#F97316]/50 rounded-full px-3 py-1 mb-3 backdrop-blur-sm w-fit">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#F97316] animate-pulse" />
+              <span className="text-orange-100 text-[11px] sm:text-xs font-semibold tracking-wide">{slide.badge}</span>
+            </div>
 
-          {/* Badge pill */}
-          <div className="inline-flex items-center gap-2 bg-[#F97316]/20 border border-[#F97316]/50 rounded-full px-3 py-1 mb-3 backdrop-blur-sm w-fit">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#F97316] animate-pulse" />
-            <span className="text-orange-100 text-[11px] sm:text-xs font-semibold tracking-wide">{s.badge}</span>
-          </div>
+            {/* Headline */}
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-white leading-tight mb-2 drop-shadow-lg">
+              {slide.headline}{' '}
+              <span className="bg-gradient-to-r from-[#F97316] via-[#fb923c] to-[#FBBF24] bg-clip-text text-transparent">
+                {slide.accent}
+              </span>
+            </h1>
 
-          {/* Headline */}
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-white leading-tight mb-2 drop-shadow-lg">
-            {s.headline}{' '}
-            <span className="bg-gradient-to-r from-[#F97316] via-[#fb923c] to-[#FBBF24] bg-clip-text text-transparent">
-              {s.accent}
-            </span>
-          </h1>
+            {/* Sub text */}
+            <p className="text-white/75 text-xs sm:text-sm mb-4 max-w-md leading-relaxed hidden sm:block">
+              {slide.sub}
+            </p>
 
-          {/* Sub text */}
-          <p className="text-white/75 text-xs sm:text-sm mb-4 max-w-md leading-relaxed hidden sm:block">
-            {s.sub}
-          </p>
+            {/* Stats + dots row */}
+            <div className="flex items-center justify-between flex-wrap gap-3">
+              <div className="flex items-center gap-5 sm:gap-8">
+                {slide.stats.map(([val, lbl]) => (
+                  <div key={lbl}>
+                    <p className="text-white font-black text-lg sm:text-xl leading-tight drop-shadow">{val}</p>
+                    <p className="text-sky-300/80 text-[10px] sm:text-xs font-medium">{lbl}</p>
+                  </div>
+                ))}
+              </div>
 
-          {/* Stats + dots row */}
-          <div className="flex items-center justify-between flex-wrap gap-3">
-
-            {/* Stats */}
-            <div className="flex items-center gap-5 sm:gap-8">
-              {s.stats.map(([val, lbl]) => (
-                <div key={lbl}>
-                  <p className="text-white font-black text-lg sm:text-xl leading-tight drop-shadow">{val}</p>
-                  <p className="text-sky-300/80 text-[10px] sm:text-xs font-medium">{lbl}</p>
+              {/* Dot indicators — only render once on the active slide to avoid duplication */}
+              {i === active && (
+                <div className="flex items-center gap-2">
+                  {slides.map((_, d) => (
+                    <button
+                      key={d}
+                      onClick={() => goTo(d)}
+                      aria-label={`Slide ${d + 1}`}
+                      className={`h-2 rounded-full transition-all duration-500 ${
+                        d === active
+                          ? 'w-7 bg-[#F97316] shadow-[0_0_8px_rgba(249,115,22,0.8)]'
+                          : 'w-2 bg-white/35 hover:bg-white/60'
+                      }`}
+                    />
+                  ))}
                 </div>
-              ))}
+              )}
             </div>
 
-            {/* Dot indicators */}
-            <div className="flex items-center gap-2">
-              {slides.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => goTo(i)}
-                  aria-label={`Slide ${i + 1}`}
-                  className={`h-2 rounded-full transition-all duration-500 ${
-                    i === active
-                      ? 'w-7 bg-[#F97316] shadow-[0_0_8px_rgba(249,115,22,0.8)]'
-                      : 'w-2 bg-white/35 hover:bg-white/60'
-                  }`}
-                />
-              ))}
+            {/* Mobile CTAs */}
+            <div className="flex gap-3 mt-4 lg:hidden">
+              <a
+                href="tel:+918889539174"
+                className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-[#F97316] to-[#ea6a10] text-white font-bold py-3 rounded-xl text-sm shadow-[0_4px_16px_rgba(249,115,22,0.45)] active:scale-95 transition-all"
+              >
+                📞 Call Now
+              </a>
+              <a
+                href="https://wa.me/918889539174?text=Hi%2C+I+need+appliance+repair+service"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 bg-[#25D366] text-white font-bold py-3 rounded-xl text-sm shadow-[0_4px_14px_rgba(37,211,102,0.35)] active:scale-95 transition-all"
+              >
+                <WhatsAppIcon className="w-4 h-4" /> WhatsApp
+              </a>
             </div>
           </div>
-
-          {/* Mobile CTAs */}
-          <div className="flex gap-3 mt-4 lg:hidden">
-            <a
-              href="tel:+918889539174"
-              className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-[#F97316] to-[#ea6a10] text-white font-bold py-3 rounded-xl text-sm shadow-[0_4px_16px_rgba(249,115,22,0.45)] active:scale-95 transition-all"
-            >
-              📞 Call Now
-            </a>
-            <a
-              href="https://wa.me/918889539174?text=Hi%2C+I+need+appliance+repair+service"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 bg-[#25D366] text-white font-bold py-3 rounded-xl text-sm shadow-[0_4px_14px_rgba(37,211,102,0.35)] active:scale-95 transition-all"
-            >
-              <WhatsAppIcon className="w-4 h-4" /> WhatsApp
-            </a>
-          </div>
-        </div>
+        ))}
       </div>
 
       {/* ══ RIGHT — BOOKING FORM (unchanged) ══ */}

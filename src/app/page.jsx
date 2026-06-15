@@ -6,8 +6,10 @@ import BrandLogos from '@/components/BrandLogos/BrandLogos';
 import CityPills from '@/components/CityPills/CityPills';
 import FAQ from '@/components/FAQ/FAQ';
 import LeadForm from '@/components/LeadForm/LeadForm';
+import ServiceCoverage from '@/components/ServiceCoverage/ServiceCoverage';
+import CustomerReviews from '@/components/CustomerReviews/CustomerReviews';
 import WhatsAppIcon from '@/components/common/WhatsAppIcon';
-import { faqs, reviews } from '@/utils/data';
+import { faqs } from '@/utils/data';
 import { localBusinessSchema, faqSchema } from '@/utils/schema';
 
 export default function Home() {
@@ -97,88 +99,8 @@ export default function Home() {
       {/* ══ CITIES ══ */}
       <CityPills />
 
-      <section className="py-14 bg-white border-b border-gray-200">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-10">
-            <span className="inline-block bg-gray-900 text-white text-xs font-bold px-4 py-1.5 rounded-full mb-3 uppercase tracking-widest">
-              Service Coverage
-            </span>
-            <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-2">
-              AC &amp; Appliance Repair in Indore &amp; Bhopal
-            </h2>
-            <div className="w-14 h-1 bg-[#F97316] rounded-full mx-auto mb-3" />
-            <p className="text-gray-500 text-sm max-w-xl mx-auto">
-              Same-day certified technicians across 70+ localities
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white rounded-2xl p-6 border border-gray-200 card-lift shadow-sm">
-              <div className="flex items-center gap-4 mb-5">
-                <div className="w-14 h-14 bg-gray-100 rounded-2xl flex items-center justify-center flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-black text-gray-900">Indore</h3>
-                  <p className="text-gray-500 text-xs font-semibold">AC Repair &amp; Home Appliance Service</p>
-                </div>
-              </div>
-              <div className="grid grid-cols-3 gap-3 mb-5">
-                {[['36+', 'Areas Covered'], ['30 Min', 'Response Time'], ['3,000+', 'Repairs Done']].map(([val, label]) => (
-                  <div key={label} className="text-center bg-gray-50 rounded-xl py-3 px-2 border border-gray-100">
-                    <p className="text-lg font-black text-gray-900 leading-tight">{val}</p>
-                    <p className="text-[10px] text-gray-500 mt-0.5">{label}</p>
-                  </div>
-                ))}
-              </div>
-              <p className="text-xs text-gray-500 mb-5 leading-relaxed">
-                <span className="font-semibold text-gray-700">Top Areas:</span> Vijay Nagar, Scheme 54, AB Road, Rau, Palasia, Super Corridor, Nipania &amp; 29 more
-              </p>
-              <a
-                href="tel:+918889539174"
-                className="w-full flex items-center justify-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold py-3.5 rounded-xl text-sm transition-all"
-              >
-                📞 Book Repair in Indore
-              </a>
-            </div>
-
-            <div className="bg-white rounded-2xl p-6 border border-gray-200 card-lift shadow-sm">
-              <div className="flex items-center gap-4 mb-5">
-                <div className="w-14 h-14 bg-gray-100 rounded-2xl flex items-center justify-center flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-black text-gray-900">Bhopal</h3>
-                  <p className="text-gray-500 text-xs font-semibold">AC Repair &amp; Home Appliance Service</p>
-                </div>
-              </div>
-              <div className="grid grid-cols-3 gap-3 mb-5">
-                {[['35+', 'Areas Covered'], ['30 Min', 'Response Time'], ['2,000+', 'Repairs Done']].map(([val, label]) => (
-                  <div key={label} className="text-center bg-gray-50 rounded-xl py-3 px-2 border border-gray-100">
-                    <p className="text-lg font-black text-gray-900 leading-tight">{val}</p>
-                    <p className="text-[10px] text-gray-500 mt-0.5">{label}</p>
-                  </div>
-                ))}
-              </div>
-              <p className="text-xs text-gray-500 mb-5 leading-relaxed">
-                <span className="font-semibold text-gray-700">Top Areas:</span> Kolar, Arera Colony, MP Nagar, BHEL, Hoshangabad Road, Shahpura &amp; 29 more
-              </p>
-              <a
-                href="tel:+918889539174"
-                className="w-full flex items-center justify-center gap-2 bg-[#F97316] hover:bg-orange-500 text-white font-bold py-3.5 rounded-xl text-sm transition-all"
-              >
-                📞 Book Repair in Bhopal
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* ══ SERVICE COVERAGE ══ */}
+      <ServiceCoverage />
 
       {/* ══ BRAND LOGOS ══ */}
       <BrandLogos />
@@ -216,47 +138,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-14 bg-white border-t border-gray-200">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-10">
-            <span className="inline-block bg-gray-900 text-white text-xs font-bold px-4 py-1.5 rounded-full mb-3 uppercase tracking-widest">
-              Customer Reviews
-            </span>
-            <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-2">
-              5,000+ Customers Ka Bharosa
-            </h2>
-            <div className="w-14 h-1 bg-[#F97316] rounded-full mx-auto mb-3" />
-            <p className="text-gray-500 text-sm">⭐ 4.8/5 Google Rating — Indore, Bhopal &amp; 8 Cities</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {reviews.map((r) => (
-              <div
-                key={r.name}
-                className="relative bg-white rounded-2xl p-5 border border-gray-200 card-lift overflow-hidden hover:border-gray-400 hover:shadow-md transition-all"
-              >
-                <span className="absolute -top-2 -left-1 text-[80px] leading-none text-gray-200 font-black select-none pointer-events-none">&ldquo;</span>
-                <div className="flex items-center gap-3 mb-3 relative">
-                  <div className="w-11 h-11 rounded-full bg-gray-900 text-white flex items-center justify-center font-black text-sm">
-                    {r.avatar}
-                  </div>
-                  <div>
-                    <p className="font-bold text-gray-900 text-sm">{r.name}</p>
-                    <p className="text-gray-400 text-xs">📍 {r.city}</p>
-                  </div>
-                  <div className="ml-auto text-yellow-400 text-sm">{'⭐'.repeat(r.rating)}</div>
-                </div>
-                {r.service && (
-                  <span className="inline-block bg-gray-100 text-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full mb-2 border border-gray-200">
-                    🔧 {r.service}
-                  </span>
-                )}
-                <p className="text-gray-600 text-sm leading-relaxed relative">&ldquo;{r.text}&rdquo;</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ══ CUSTOMER REVIEWS ══ */}
+      <CustomerReviews />
 
       <section className="py-14 bg-orange-50 relative overflow-hidden border-t border-orange-100" id="book">
         <div className="max-w-2xl mx-auto px-4 relative z-10">
