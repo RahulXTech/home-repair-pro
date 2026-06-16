@@ -8,6 +8,7 @@ import FAQ from '@/components/FAQ/FAQ';
 import LeadForm from '@/components/LeadForm/LeadForm';
 import ServiceCoverage from '@/components/ServiceCoverage/ServiceCoverage';
 import CustomerReviews from '@/components/CustomerReviews/CustomerReviews';
+import CertifiedProjects from '@/components/CertifiedProjects/CertifiedProjects';
 import WhatsAppIcon from '@/components/common/WhatsAppIcon';
 import { faqs } from '@/utils/data';
 import { localBusinessSchema, faqSchema } from '@/utils/schema';
@@ -27,11 +28,11 @@ export default function Home() {
       {/* ══ HERO SLIDER ══ */}
       <HeroSlider />
 
-      {/* ══ ABOUT SECTION ══ */}
-      <AboutSection />
-
       {/* ══ TRUST STATS BAR ══ */}
       <TrustBadges />
+
+      {/* ══ ABOUT SECTION ══ */}
+      <AboutSection />
 
       {/* ══ SERVICES GRID ══ */}
       <ServiceGrid />
@@ -140,6 +141,9 @@ export default function Home() {
 
       {/* ══ CUSTOMER REVIEWS ══ */}
       <CustomerReviews />
+
+      {/* ══ CERTIFIED PROJECTS ══ */}
+      <CertifiedProjects />
 
       <section className="py-14 bg-orange-50 relative overflow-hidden border-t border-orange-100" id="book">
         <div className="max-w-2xl mx-auto px-4 relative z-10">
